@@ -1,19 +1,13 @@
 package com.sbm.user.pageradaptor;
-
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Firstfragment#newInstance} factory method to
@@ -29,14 +23,9 @@ public class Firstfragment extends Fragment {
     private String Country;
     private String City;
     private int flag;
-
-
-
     public Firstfragment() {
         // Required empty public constructor
     }
-
-
     // TODO: Rename and change types and number of parameters
     public static Firstfragment newInstance(PageWrapper pageWrapper) {
         Firstfragment fragment = new Firstfragment();
@@ -47,7 +36,6 @@ public class Firstfragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +45,6 @@ public class Firstfragment extends Fragment {
             flag=getArguments().getInt("Flag",0);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -76,12 +63,8 @@ public class Firstfragment extends Fragment {
             public void onClick(View v) {
                 Intent intent=new Intent(getActivity(),SubmitActivity.class);
                 startActivity(intent);
-
             }
         });
         return view;
-
     }
-
-
 }
